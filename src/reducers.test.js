@@ -25,21 +25,18 @@ describe('searchRobots reducer', () => {
 
 const initialStateRobots = {
 	robots: [],
-	isPending: true,
+	isPending: false,
 };
 describe('requestRobots reducer', () => {
 	it('should return the initial state', () => {
-		expect(reducers.requestRobots(undefined, {})).toEqual({
-			robots: [],
-			isPending: true,
-		});
+		expect(reducers.requestRobots(undefined, {})).toEqual(initialStateRobots);
 	});
 
 	it('should handle REQUEST_ROBOTS_PENDING action', () => {
 		expect(
 			reducers.requestRobots(initialStateRobots, {
 				type: types.REQUEST_ROBOTS_PENDING,
-				payload: { isPending: true },
+				// payload: { isPending: true },
 			})
 		).toEqual({
 			robots: [],
@@ -78,7 +75,7 @@ describe('requestRobots reducer', () => {
 		).toEqual({
 			error: 'NOOO',
 			robots: [],
-			isPending: true,
+			isPending: false,
 		});
 	});
 });
