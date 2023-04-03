@@ -1,8 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`correnctly increments the counter 1`] = `
+exports[`Expect to render CounterButton 1`] = `
 <button
-  color="red"
   id="counter"
   onClick={[Function]}
 >
@@ -11,7 +10,7 @@ exports[`correnctly increments the counter 1`] = `
 </button>
 `;
 
-exports[`renders without crashing 1`] = `
+exports[`correnctly increments the counter 1`] = `
 <button
   color="red"
   id="counter"
